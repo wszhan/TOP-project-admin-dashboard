@@ -5,6 +5,14 @@
     --sidebar-font-family: 'LiberationSansBold', var(--fallback-fonts);
 }
 
+body {
+    display: grid;
+    grid-template-columns: clamp(200px, 20%, 260px) auto;
+    grid-template-rows: 1fr 5fr;
+
+    margin: 0;
+}
+
 .sidebar {
     background-color: skyblue;
     grid-area: 1 / 1 / -1 / 2;
@@ -15,22 +23,38 @@
     justify-content: flex-start;
 
     font-family: var(--sidebar-font-family);
+    font-size: 1rem;
+    color: white;
+
+    --sidebar-base-padding: 2em;
+    padding: var(--sidebar-base-padding);
+    /* padding-right: calc(var(--sidebar-base-padding) * 2); */
 }
 
-.sidebar > * {
-    padding-left: 1em;
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.logo-icon {
+    width: 3em;
+    height: 3em;
+}
+
+/* .sidebar > * {
+    --sidebar-padding: 1em;
+    padding: var(--sidebar-padding);
+    padding-right: calc(var(--sidebar-padding) * 2);
+} */
 
 .sidebar a {
     text-decoration: none;
     color: inherit;
 }
 
-svg path {
-    fill: #000;
-}
-
-.navigation-bar > ul {
+.navigation-bar > ul,
+.footer > ul {
     display: grid;
     row-gap: 0.5em;
 }
@@ -39,7 +63,8 @@ svg path {
     padding: 0;
 }
 
-.navigation-bar li {
+.navigation-bar li,
+.footer li {
     display: flex;
     align-items: flex-start;
     column-gap: 1em;
@@ -99,10 +124,4 @@ svg path {
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-body {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
 }
