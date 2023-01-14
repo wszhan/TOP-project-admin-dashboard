@@ -58,7 +58,7 @@ body {
     display: grid;
     row-gap: 0.5em;
 }
-.navigation-bar p {
+p {
     margin: 0;
     padding: 0;
 }
@@ -139,9 +139,42 @@ img {
 
 .header-lower-bar {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: calc(1fr * .85);
     grid-auto-flow: column;
 }
+
+
+.welcome-information {
+    height: 100%;
+    display: flex;
+    column-gap: 1em;
+}
+.welcome-information .user-avatar {
+    width: min(4em, 80px);
+}
+.welcome-message {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+}
+.welcome-message p {
+    font-size: 1em;
+}
+.current-username-with-id {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.utility-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3%;;
+    align-items: center;
+}
+.utility-buttons > button {
+    height: 50%;
+}
+
 
 .content {
     background-color: grey;
