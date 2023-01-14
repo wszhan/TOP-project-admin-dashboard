@@ -106,7 +106,7 @@ p {
 .search-bar {
     display: flex;
     flex-wrap: nowrap;
-    width: clamp(100px, 40%, 560px);
+    width: calc(100% - 5em);
     column-gap: .5em;
     align-items: center;
 }
@@ -114,6 +114,7 @@ p {
 input[type="search"] {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .notifications {
