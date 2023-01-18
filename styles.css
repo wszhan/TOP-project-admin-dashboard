@@ -180,6 +180,7 @@ img {
 .content {
     --content-area-bg-color: grey;
     --content-area-header-title-font-color: darkgrey;
+    --card-background-color: white;
 
     background-color: var(--content-area-bg-color);
 
@@ -197,16 +198,20 @@ img {
     margin-bottom: 1em;
 }
 
+.project,
+.announcements,
+.trending {
+    margin: 1em;
+}
+
 .project {
     grid-column-end: -2;
     grid-row: 1 / -1;
-
-    margin: 1em;
 }
 
 .announcements {
     grid-column-start: -2;
-    /* grid-row-start: 0; */
+    margin: 1em;
 }
 
 .project-cards {
@@ -216,8 +221,7 @@ img {
 }
 
 .project-card {
-    /* margin: 1em; */
-    background-color: white;
+    background-color: var(--card-background-color);
 }
 
 .project-title,
@@ -240,4 +244,15 @@ img {
 }
 .card-buttons > a {
     width: 1.5em;
+}
+
+.announcement-cards {
+    background-color: var(--card-background-color);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+}
+.announcement-title {
+    font-weight: bold;
 }
