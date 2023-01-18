@@ -261,3 +261,22 @@ img {
     border-top: 3px dashed #bbb;
     padding-top: var(--announcement-cards-row-gap);
 }
+.trending-profiles-container {
+    background-color: var(--card-background-color);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.trending-profile-card {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: .8em;
+    justify-content: start;
+    align-items: center;
+}
+.trending-profile-card > img {
+    object-fit: cover;
+    grid-row: 1 / span 2;
+}
