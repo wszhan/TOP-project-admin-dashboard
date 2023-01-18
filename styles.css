@@ -1,8 +1,16 @@
 @import url('https://fontlibrary.org//face/liberation-sans-unofficial-opentype-cff-version');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
 
 :root {
     --fallback-fonts: 'Courier New', Courier, monospace;
     --sidebar-font-family: 'LiberationSansBold', var(--fallback-fonts);
+    --header-background-color: aliceblue;
+    --content-background-color: rgb(209, 229, 247);
+    --content-area-header-title-font-color: black;
+    --card-background-color: white;
+    --sofia-sans-font: "Sofia Sans";
+    --header-font-family: var(--sofia-sans-font), 'Courier New', Courier, monospace;
+    --content-font-family: var(--header-font-family);
 }
 
 body {
@@ -84,7 +92,7 @@ p {
 }
 
 .header {
-    background-color: aliceblue;
+    background-color: var(--header-background-color);
     grid-area: 1 / 2 / 2 / -1;
 
     display: flex;
@@ -92,6 +100,8 @@ p {
     row-gap: 1em;
 
     padding: 1.5em;
+
+    font-family: var(--header-font-family);
 }
 
 .search-bar img {
@@ -174,15 +184,14 @@ img {
 }
 .utility-buttons > button {
     height: 50%;
+    font-family: inherit;
 }
 
 
 .content {
-    --content-area-bg-color: grey;
-    --content-area-header-title-font-color: darkgrey;
-    --card-background-color: white;
+    font-family: var(--content-font-family);
 
-    background-color: var(--content-area-bg-color);
+    background-color: var(--content-background-color);
 
     display: grid;
     grid-template-columns: 4fr 1fr;
