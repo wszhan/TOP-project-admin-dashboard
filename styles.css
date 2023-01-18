@@ -239,7 +239,8 @@ img {
 
 .project-card {
     background-color: var(--card-background-color);
-    border-radius: 1em;
+    border-radius: .5em;
+    border-left: .5em solid orange;
 }
 
 .project-title,
