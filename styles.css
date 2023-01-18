@@ -178,20 +178,30 @@ img {
 
 
 .content {
-    background-color: grey;
+    --content-area-bg-color: grey;
+    --content-area-header-title-font-color: darkgrey;
+
+    background-color: var(--content-area-bg-color);
 
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.project {
-    grid-column-end: -2;
-    grid-row: 1 / -1
+.project-area-header,
+.announcement-area-header,
+.trending-area-header {
+    color: var(--content-area-header-title-font-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
-.project-area-header {
-    margin: 2em;
+.project {
+    grid-column-end: -2;
+    grid-row: 1 / -1;
+
+    margin: 1em;
 }
 
 .announcements {
@@ -202,11 +212,11 @@ img {
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    margin: 1em;
+    gap: 1em;
 }
 
 .project-card {
-    margin: 1em;
+    /* margin: 1em; */
     background-color: white;
 }
 

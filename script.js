@@ -9,7 +9,12 @@ const CARD_BUTTON_ICONS = [
     'share'
 ];
 
-createCards(10);
+
+initProjectCards();
+
+function initProjectCards() {
+    createCards(10);
+}
 
 function createCards(numberOfCards = 0) {
     for (let i = 0; i < numberOfCards; i++) {
