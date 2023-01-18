@@ -1,5 +1,6 @@
 @import url('https://fontlibrary.org//face/liberation-sans-unofficial-opentype-cff-version');
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;400;600;700&display=swap');
 
 :root {
     --fallback-fonts: 'Courier New', Courier, monospace;
@@ -205,6 +206,13 @@ img {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 1em;
+    margin-left: .8em;
+}
+
+.project-description,
+.announcement-description,
+.trending-user-title {
+    color: rgb(121, 120, 120);
 }
 
 .project,
@@ -231,6 +239,7 @@ img {
 
 .project-card {
     background-color: var(--card-background-color);
+    border-radius: 1em;
 }
 
 .project-title,
@@ -262,6 +271,7 @@ img {
     display: flex;
     flex-direction: column;
     row-gap: var(--announcement-cards-row-gap);
+    border-radius: 1em;
 }
 .announcement-title {
     font-weight: bold;
@@ -276,6 +286,7 @@ img {
     display: flex;
     flex-direction: column;
     row-gap: 1em;
+    border-radius: 1em;
 }
 .trending-profile-card {
     display: grid;
