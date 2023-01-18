@@ -247,12 +247,17 @@ img {
 }
 
 .announcement-cards {
+    --announcement-cards-row-gap: 1.5em;
     background-color: var(--card-background-color);
     padding: 1em;
     display: flex;
     flex-direction: column;
-    row-gap: 1.5em;
+    row-gap: var(--announcement-cards-row-gap);
 }
 .announcement-title {
     font-weight: bold;
+}
+.announcement-card:not(:first-child) {
+    border-top: 3px dashed #bbb;
+    padding-top: var(--announcement-cards-row-gap);
 }
