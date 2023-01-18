@@ -12,6 +12,9 @@
     --sofia-sans-font: "Sofia Sans";
     --header-font-family: var(--sofia-sans-font), 'Courier New', Courier, monospace;
     --content-font-family: var(--header-font-family);
+
+    --sidebar-background-color: rgb(44, 157, 202);
+    --sidebar-font-color: white;
 }
 
 body {
@@ -23,7 +26,8 @@ body {
 }
 
 .sidebar {
-    background-color: rgb(44, 157, 202);
+    /* background-color: rgb(44, 157, 202); */
+    background-color: var(--sidebar-background-color);
     grid-area: 1 / 1 / -1 / 2;
 
     display: flex;
@@ -33,7 +37,7 @@ body {
 
     font-family: var(--sidebar-font-family);
     font-size: 1rem;
-    color: white;
+    color: var(--sidebar-font-color);
 
     --sidebar-base-padding: 2em;
     padding: var(--sidebar-base-padding);
@@ -186,6 +190,10 @@ img {
 .utility-buttons > button {
     height: 50%;
     font-family: inherit;
+    background-color: var(--sidebar-background-color);
+    color: var(--sidebar-font-color);
+    border: none;
+    border-radius: 1em;
 }
 
 
