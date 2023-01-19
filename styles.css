@@ -118,6 +118,7 @@ p {
     flex: 1;
 }
 
+
 .search-bar {
     display: flex;
     flex-wrap: nowrap;
@@ -127,9 +128,10 @@ p {
 }
 
 input[type="search"] {
-    padding: 0;
+    padding: 0 5px;
     margin: 0;
     width: 100%;
+    border-radius: 5px;
 }
 
 .notifications {
