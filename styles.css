@@ -20,7 +20,7 @@
 body {
     display: grid;
     grid-template-columns: clamp(200px, 20%, 260px) auto;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: auto 5fr;
 
     margin: 0;
 }
