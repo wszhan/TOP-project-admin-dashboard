@@ -13,7 +13,7 @@ const CARD_BUTTON_ICONS = [
 initProjectCards();
 
 function initProjectCards() {
-    createCards(10);
+    createCards(20);
 }
 
 function createCards(numberOfCards = 0) {
